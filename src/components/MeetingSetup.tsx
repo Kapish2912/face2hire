@@ -11,18 +11,20 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
 
   const call = useCall();
 
-  if (!call) return null;
-
   useEffect(() => {
+    if (!call) return;
     if (isCameraDisabled) call.camera.disable();
     else call.camera.enable();
-  }, [isCameraDisabled, call.camera]);
-
+  }, [isCameraDisabled, call]);
+  
   useEffect(() => {
+    if (!call) return;
     if (isMicDisabled) call.microphone.disable();
     else call.microphone.enable();
-  }, [isMicDisabled, call.microphone]);
-
+  }, [isMicDisabled, call]);
+  
+  if (!call) return null; // Move this after the hooks
+  
   const handleJoin = async () => {
     await call.join();
     onSetupComplete();
