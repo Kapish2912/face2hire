@@ -36,7 +36,7 @@ function DashboardPage() {
 
   const groupedInterviews = groupInterviews(interviews);
 
-  return (
+ return (
     <div className="container mx-auto py-10">
       <div className="flex items-center mb-8">
         <Link href="/schedule">
@@ -47,16 +47,16 @@ function DashboardPage() {
       <div className="space-y-8">
         {INTERVIEW_CATEGORY.map(
           (category) =>
-            groupedInterviews[category.id]?.length > 0 && (
+            (groupedInterviews[category.id]?.length ?? 0) > 0 && (
               <section key={category.id}>
                 {/* CATEGORY TITLE */}
                 <div className="flex items-center gap-2 mb-4">
                   <h2 className="text-xl font-semibold">{category.title}</h2>
-                  <Badge variant={category.variant}>{groupedInterviews[category.id].length}</Badge>
+                  <Badge variant={category.variant}>{groupedInterviews[category.id]?.length ?? 0}</Badge>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {groupedInterviews[category.id].map((interview: Interview) => {
+                  {groupedInterviews[category.id]?.map((interview: Interview) => {
                     const candidateInfo = getCandidateInfo(users, interview.candidateId);
                     const startTime = new Date(interview.startTime);
 
