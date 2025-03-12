@@ -189,6 +189,188 @@ bool isPalindrome(int x) {
 }`,
     },
   },
+
+  {
+    id: "fibonacci-number",
+    title: "Fibonacci Number",
+    description:
+      "Given an integer `n`, return the `n`th Fibonacci number. The Fibonacci sequence is defined as follows:\n- `F(0) = 0, F(1) = 1`\n- `F(n) = F(n-1) + F(n-2)`, for `n >= 2`.",
+    examples: [
+      {
+        input: "n = 2",
+        output: "1",
+      },
+      {
+        input: "n = 5",
+        output: "5",
+      },
+      {
+        input: "n = 10",
+        output: "55",
+      },
+    ],
+    starterCode: {
+      javascript: `function fibonacci(n) {
+  // Write your solution here
+}`,
+      python: `def fibonacci(n):
+    # Write your solution here
+    pass`,
+      java: `class Solution {
+    public int fibonacci(int n) {
+        // Write your solution here
+    }
+}`,
+      c: `#include <stdio.h>
+
+int fibonacci(int n) {
+    // Write your solution here
+}`,
+      cpp: `#include <iostream>
+using namespace std;
+
+int fibonacci(int n) {
+    // Write your solution here
+}`,
+    },
+  },
+
+  {
+    id: "count-primes",
+    title: "Count Primes",
+    description:
+      "Given an integer `n`, return the number of prime numbers that are strictly less than `n`.",
+    examples: [
+      {
+        input: "n = 10",
+        output: "4",
+        explanation: "The primes less than 10 are 2, 3, 5, 7.",
+      },
+      {
+        input: "n = 0",
+        output: "0",
+      },
+      {
+        input: "n = 1",
+        output: "0",
+      },
+    ],
+    starterCode: {
+      javascript: `function countPrimes(n) {
+  // Write your solution here
+}`,
+      python: `def count_primes(n):
+    # Write your solution here
+    pass`,
+      java: `class Solution {
+    public int countPrimes(int n) {
+        // Write your solution here
+    }
+}`,
+      c: `#include <stdio.h>
+
+int countPrimes(int n) {
+    // Write your solution here
+}`,
+      cpp: `#include <iostream>
+using namespace std;
+
+int countPrimes(int n) {
+    // Write your solution here
+}`,
+    },
+  },
+
+  {
+    id: "single-number",
+    title: "Single Number",
+    description:
+      "Given a non-empty array of integers `nums`, every element appears twice except for one. Find that single one. You must implement a solution with linear runtime complexity and without using extra memory.",
+    examples: [
+      {
+        input: "nums = [2,2,1]",
+        output: "1",
+      },
+      {
+        input: "nums = [4,1,2,1,2]",
+        output: "4",
+      },
+    ],
+    starterCode: {
+      javascript: `function singleNumber(nums) {
+  // Write your solution here
+}`,
+      python: `def single_number(nums):
+    # Write your solution here
+    pass`,
+      java: `class Solution {
+    public int singleNumber(int[] nums) {
+        // Write your solution here
+    }
+}`,
+      c: `#include <stdio.h>
+
+int singleNumber(int nums[], int size) {
+    // Write your solution here
+}`,
+      cpp: `#include <iostream>
+using namespace std;
+
+int singleNumber(int nums[], int size) {
+    // Write your solution here
+}`,
+    },
+  },
+
+  {
+    id: "power-of-two",
+    title: "Power of Two",
+    description:
+      "Given an integer `n`, return `true` if it is a power of two, otherwise return `false`. An integer `n` is a power of two if there exists an integer `x` such that `n == 2^x`.",
+    examples: [
+      {
+        input: "n = 1",
+        output: "true",
+        explanation: "2^0 = 1",
+      },
+      {
+        input: "n = 16",
+        output: "true",
+      },
+      {
+        input: "n = 3",
+        output: "false",
+      },
+    ],
+    starterCode: {
+      javascript: `function isPowerOfTwo(n) {
+  // Write your solution here
+}`,
+      python: `def is_power_of_two(n):
+    # Write your solution here
+    pass`,
+      java: `class Solution {
+    public boolean isPowerOfTwo(int n) {
+        // Write your solution here
+    }
+}`,
+      c: `#include <stdio.h>
+#include <stdbool.h>
+
+bool isPowerOfTwo(int n) {
+    // Write your solution here
+}`,
+      cpp: `#include <iostream>
+using namespace std;
+
+bool isPowerOfTwo(int n) {
+    // Write your solution here
+}`,
+    },
+  },
+
+
+
 ];
 
 export const LANGUAGES = [
